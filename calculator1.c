@@ -50,16 +50,20 @@ float POWER()
 }
 float Average()
 {
-    float number,sum;
-    int n;
-    printf("How many numbers do u want to find the average of?");
-    scanf("%d",&n);
-    for(int i=0;i<n;i++)
+    float number,sum=0.0;
+    int cnt=0;
+    char specific;
+    while(1)
     {
         scanf("%f",&number);
+        scanf("%c",&specific);
+        if(specific=='s')
+            break;
         sum+=number;
+        cnt++;
     }
-    return sum/n;
+
+    return sum/cnt;
 }
 int main()
 {
